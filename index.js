@@ -1,4 +1,5 @@
-var util = require('util'),
+var fs = require('fs'),
+    util = require('util'),
     EventEmitter = require('events').EventEmitter,
     bemWalk = require('bem-walk'),
     naming = require('bem-naming');
@@ -20,6 +21,8 @@ function Valkyrie(levels, opts) {
                 entityKey = {};
 
             entityKey[type] = item.entity[type];
+
+            fs.lstatSync(item.path).isDirectory() && (item.isDir = true);
 
             _this.emit('*', item);
             _this.emit(type, item);
