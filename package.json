@@ -1,0 +1,15 @@
+{
+  "name": "valkyrie",
+  "version": "1.0.0",
+  "description": "bem-walk wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vladimir Grinenko",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "bem-naming": "^0.5.1",
+    "bem-walk": "bem/bem-walk#41d0464dd6d25725e0fa0e66ff04f9056bbb9f01"
+  }
+}
