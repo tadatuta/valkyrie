@@ -1,12 +1,10 @@
+```js
 var levels = [
     '../../libs/bem-components/common.blocks',
     '../../libs/bem-components/desktop.blocks',
     '../../libs/bem-components/design/common.blocks',
     '../../libs/bem-components/design/desktop.blocks'
 ];
-
-// TODO: рекурсивно погружаться вглубь директорий ?
-// TODO: добавлять поле про файл/директория
 
 var Valkyrie = require('./valkyrie'),
     valka = Valkyrie(levels);
@@ -34,3 +32,4 @@ valka
     .on('end', function(files) {
         console.log('end');
     });
+```
