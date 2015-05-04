@@ -1,3 +1,6 @@
+// TODO: поддержать промисы
+// TODO: поддержать передачу произвольного коллбека для .get()
+
 var fs = require('fs'),
     util = require('util'),
     EventEmitter = require('events').EventEmitter,
