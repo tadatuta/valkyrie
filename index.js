@@ -15,7 +15,7 @@ function Valkyrie(levels, opts) {
     }
 
     var _this = this,
-        walker = this.walker = bemWalk(levels, opts);
+        walker = this.walker = bemWalk(levels, { defaults: opts });
 
     walker
         .on('data', function(item) {
