@@ -1,3 +1,7 @@
+# bem-valkyrie
+
+A [bem-walk](https://github.com/bem/bem-walk) wrapper.
+
 ```js
 var levels = [
     '../../libs/bem-components/common.blocks',
@@ -11,21 +15,21 @@ var Valkyrie = require('./valkyrie'),
 
 valka
     .on('*', function(files) {
-        // все файлы любых сущностей
+        // all the files of all the entities
     })
     .on('block', function(files) {
-        // все файлы блоков
+        // all blocks files
     })
     .on({ block: 'select' }, function(files) {
-        // все файлы блока select
+        // all files of `select` block
     })
     .on({ tech: 'examples' }, function(files) {
-        // все файлы с технологией examples
+        // all files with `examples` tech
         Valkyrie([files.path], { scheme: 'flat' })
             .on({ tech: 'blocks' }, function(files) {
                 Valkyrie([files.path])
                     .on('*', function(files) {
-                        console.log(files); // все файлы кастомных блоков для примеров
+                        console.log(files); // all files of custom blocks of an example
                     })
             });
     })
